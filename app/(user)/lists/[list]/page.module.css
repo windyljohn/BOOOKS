@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "GT Walsheim Pro Bold";
+  src: url("../../../../fonts/GT-Walsheim-Pro-Bold.otf");
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Medium";
+  src: url("../../../../fonts/GT-Walsheim-Pro-Medium.otf");
+}
+
+.section {
+  padding: 8rem;
+  margin: 0 auto;
+  width: 144rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  font-family: "GT Walsheim Pro Bold";
+  font-size: 4.8rem;
+  margin-bottom: 9rem;
+}
+
+.book-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 6rem;
+  row-gap: 6rem;
+  justify-content: center;
+  margin-bottom: 10rem;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.explore {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.4rem;
+  transition: all 0.2s;
+}
+
+.explore:hover {
+  font-family: "GT Walsheim Pro Medium";
+}
+
+.explore-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.explore-wrapper p {
+  /* display: block; */
+  width: 10rem;
+}

@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "GT Walsheim Pro Light";
+  src: url("../fonts/GTWalsheimPro-Light.woff");
+}
+
+html,
+body {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  font-family: "GT Walsheim Pro Light";
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.search-open {
+  overflow-y: hidden;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}

@@ -1,0 +1,40 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page {
+  font-size: 1.6rem;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.controls {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.controls button {
+  background-color: #fff;
+  padding: 0.5rem;
+  display: flex;
+  border-radius: 100%;
+  border: solid 1px #000;
+  cursor: pointer;
+}
+
+.controls button:disabled {
+  cursor: default;
+  border: solid 1px #c3c3c3;
+
+  .icon {
+    opacity: 0.3;
+  }
+}
+
+.icon {
+  -webkit-user-drag: none;
+}

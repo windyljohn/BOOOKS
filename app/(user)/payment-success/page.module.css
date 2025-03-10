@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "GT Walsheim Pro Medium";
+  src: url("../../../fonts/GTWalsheimPro-Medium.woff");
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Bold";
+  src: url("../../../fonts/GT-Walsheim-Pro-Bold.otf");
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Regular";
+  src: url("../../../fonts/GT-Walsheim-Pro-Regular.otf");
+}
+
+.section {
+  padding: 8rem;
+  max-width: 150rem;
+  margin: 0 auto;
+  min-height: 60rem;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7.2rem;
+}
+
+.header {
+  font-family: "GT Walsheim Pro Bold";
+  font-size: 3.2rem;
+}
+
+.shopping {
+  border-bottom: solid 1px #000;
+  text-decoration: none;
+  color: #3c3c3c;
+  font-size: 1.4rem;
+  padding-bottom: 0.1rem;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-wrapper {
+  width: 100%;
+  max-width: 50rem;
+}
+
+.empty {
+  font-size: 1.8rem;
+}

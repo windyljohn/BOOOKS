@@ -1,0 +1,28 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.page {
+  font-size: 1.6rem;
+}
+
+.controls {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.controls button {
+  background-color: #fff;
+  padding: 0.5rem;
+  display: flex;
+  border-radius: 100%;
+  border: solid 1px #000;
+  cursor: pointer;
+}
+
+.icon {
+  -webkit-user-drag: none;
+}

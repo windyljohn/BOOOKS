@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "GT Walsheim Pro Medium";
+  src: url("../../../../fonts/GTWalsheimPro-Medium.woff");
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Regular";
+  src: url("../../../../fonts/GT-Walsheim-Pro-Regular.otf");
+}
+
+.item {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  border-bottom: solid 1px #efefef;
+  padding-bottom: 5rem;
+  margin-bottom: 5rem;
+}
+
+.image {
+  -webkit-user-drag: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.item-details {
+  width: 100%;
+}
+
+.item-count {
+  font-size: 1.6rem;
+  min-width: 2rem;
+  text-align: center;
+}
+
+.item-price {
+  font-family: "GT Walsheim Pro Medium";
+  font-size: 1.4rem;
+}
+
+.item-title {
+  font-family: "GT Walsheim Pro Regular";
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.item-author {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.count-wrapper {
+  display: flex;
+  gap: 1.5rem;
+  border: solid 0.5px #efefef;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+  justify-self: flex-start;
+}
+
+.icon {
+  -webkit-user-drag: none;
+  cursor: pointer;
+}
+
+.price-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-wrapper img {
+  margin-right: 1rem;
+}

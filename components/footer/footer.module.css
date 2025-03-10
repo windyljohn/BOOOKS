@@ -1,0 +1,165 @@
+@font-face {
+  font-family: "GT Walsheim Pro Bold";
+  src: url("../../fonts/GT-Walsheim-Pro-Bold.otf");
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Medium";
+  src: url("../../fonts/GT-Walsheim-Pro-Medium.otf");
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Regular";
+  src: url("../../fonts/GT-Walsheim-Pro-Regular.otf");
+}
+
+.section {
+  padding: 8rem 7rem;
+  background-color: #000;
+  color: #fff;
+}
+
+.wrapper {
+  display: flex;
+  gap: 90rem;
+  margin-bottom: 6rem;
+}
+
+.main-col {
+  width: 50rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  font-family: "GT Walsheim Pro Bold";
+  font-size: 3rem;
+  margin-bottom: 1.4rem;
+}
+
+.text1 {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  line-height: 2rem;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  height: 4rem;
+  border: #fff 1.5px solid;
+  border-radius: 3rem;
+  font-size: 1.6rem;
+  padding-left: 1.6rem;
+  background-color: #000;
+  color: #fff;
+}
+
+.input:focus {
+  box-shadow: 0 0 0 2px #fff;
+}
+
+.input-error {
+  width: 100%;
+  height: 4rem;
+  border: red 1.5px solid;
+  border-radius: 3rem;
+  font-size: 1.6rem;
+  padding-left: 1.6rem;
+  background-color: #000;
+  color: #fff;
+}
+
+.icon-arrow {
+  cursor: pointer;
+  position: absolute;
+  top: calc(50% - 10px);
+  right: 1.25rem;
+  background: none;
+  border: none;
+}
+
+.icon-arrow img {
+  -webkit-user-drag: none;
+}
+
+.text2 {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+}
+
+.text2 a {
+  color: #fff;
+}
+
+.dropdowns {
+  max-width: 50rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
+}
+
+.title {
+  font-family: "GT Walsheim Pro Bold";
+  font-size: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.links {
+  font-size: 1.4rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.links a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.active {
+  font-family: "GT Walsheim Pro Medium";
+}
+
+.links a:hover {
+  font-family: "GT Walsheim Pro Medium";
+}
+
+.footer-line {
+  width: 100%;
+  height: 1px;
+  background: #3c3c3c;
+  margin-bottom: 3rem;
+}
+
+.bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-text {
+  font-size: 1.6rem;
+}
+
+.bottom-text a {
+  font-family: "GT Walsheim Pro Bold";
+  text-decoration: none;
+  color: #fff;
+}
+
+.payment-list {
+  display: flex;
+  list-style: none;
+  gap: 1.6rem;
+}
+
+.payment-list img {
+  width: 4.8rem;
+  height: 100%;
+  -webkit-user-drag: none;
+}

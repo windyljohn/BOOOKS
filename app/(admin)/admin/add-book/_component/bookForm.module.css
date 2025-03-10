@@ -1,0 +1,208 @@
+@font-face {
+  font-family: "GT Walsheim Pro Bold";
+  src: url("../../../../../fonts/GT-Walsheim-Pro-Bold.otf");
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Medium";
+  src: url("../../../../../fonts/GT-Walsheim-Pro-Medium.otf");
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Regular";
+  src: url("../../../../../fonts/GT-Walsheim-Pro-Regular.otf");
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro Light";
+  src: url("../../../../../fonts/GT-Walsheim-Pro-Light.otf");
+}
+
+.section {
+  margin: 0 auto;
+  max-width: 100rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.success {
+  position: absolute;
+  font-family: "GT Walsheim Pro Medium";
+  font-size: 3.2rem;
+  border-radius: 1rem;
+  padding: 2rem 3rem;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  width: 55rem;
+  right: 0;
+  top: 2rem;
+  right: 22rem;
+  transform: translateY(50%);
+}
+
+.success::after {
+  content: "";
+  width: 12px;
+  height: 100%;
+  background-color: rgb(103, 215, 64);
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  border-radius: 1rem 0 0 1rem;
+}
+
+.text {
+  width: 100%;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.success-container {
+  display: flex;
+  align-items: center;
+}
+
+.success-container img {
+  -webkit-user-drag: none;
+}
+
+.success-header {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem fin;
+  user-select: none;
+}
+
+.success-text {
+  font-family: "GT Walsheim Pro Regular";
+  font-size: 1.8rem;
+  color: #7c7c7c;
+  user-select: none;
+  width: 100%;
+}
+
+.close {
+  font-size: 1.4rem;
+  color: #cecece;
+  height: 100%;
+  padding-left: 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.close::before {
+  content: "";
+  height: 100%;
+  width: 1px;
+  right: 10rem;
+  top: 0;
+  background-color: #eeeeee;
+  position: absolute;
+}
+
+.header {
+  font-family: "GT Walsheim Pro Bold";
+  font-size: 3.2rem;
+  user-select: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 1.4rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 4rem;
+  border: solid 1px #dedede;
+  justify-content: flex-end;
+}
+
+.alert {
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  gap: 1rem;
+  width: 25rem;
+  cursor: pointer;
+}
+
+.checkbox label {
+  font-size: 1.4rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox input {
+  appearance: none;
+  align-self: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+
+.checkbox input:checked {
+  background-color: #000;
+  box-shadow: inset 0 0 0 2px #fff;
+}
+
+.title {
+  font-family: "GT Walsheim Pro Medium";
+  font-size: 1.8rem;
+  margin-bottom: 1.4rem;
+  user-select: none;
+}
+.input {
+  font-family: "GT Walsheim Pro Regular";
+  font-size: 1.4rem;
+  padding: 1rem;
+  border-radius: 5px;
+  border: solid 1px#dedede;
+  box-shadow: transparent;
+}
+
+.input:focus {
+  box-shadow: 0 0 0 1px #000;
+}
+
+.input[type="number"]::-webkit-inner-spin-button,
+.input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.button {
+  cursor: pointer;
+  background-color: #000;
+  width: 100%;
+  padding: 1.4rem;
+  border-radius: 5px;
+  font-family: "GT Walsheim Pro Bold";
+  font-size: 2rem;
+  color: #fff;
+  margin: 2rem 0 2rem 0;
+}
+
+.button:disabled {
+  background-color: #3c3c3c;
+}

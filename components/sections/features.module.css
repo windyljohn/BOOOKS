@@ -1,0 +1,25 @@
+.section {
+  padding: 8rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.wrapper {
+  max-width: 135rem;
+}
+
+.text-large {
+  font-size: 3.2rem;
+  margin-bottom: 1.3rem;
+}
+
+.text-small {
+  font-size: 2rem;
+  margin-bottom: 4.6rem;
+}
+
+.features {
+  display: flex;
+  gap: 5rem;
+}

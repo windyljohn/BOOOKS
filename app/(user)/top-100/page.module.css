@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "GT Walsheim Pro Bold";
+  src: url("../../../fonts/GT-Walsheim-Pro-Bold.otf");
+}
+
+.section {
+  padding: 8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  max-width: 134rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  font-family: "GT Walsheim Pro Bold";
+  font-size: 4.8rem;
+  margin-bottom: 8rem;
+}
+
+.books-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-items {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  justify-content: space-between;
+  column-gap: 10rem;
+  row-gap: 7.5rem;
+  margin-bottom: 6rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page {
+  font-size: 1.6rem;
+}
+
+.controls {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.controls button {
+  background-color: #fff;
+  padding: 0.5rem;
+  display: flex;
+  border-radius: 100%;
+  border: solid 1px #000;
+}

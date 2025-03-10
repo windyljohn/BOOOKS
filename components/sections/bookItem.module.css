@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "GT Walsheim Pro Regular";
+  src: url("../../fonts/GT-Walsheim-Pro-Regular.otf");
+}
+
+.book {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 14rem;
+  min-height: 32rem;
+}
+
+.image {
+  -webkit-user-drag: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.25s;
+}
+
+.image:hover {
+  transform: translatey(-5px);
+}
+
+.title {
+  font-family: "GT Walsheim Pro Regular";
+  font-size: 1.6rem;
+  line-height: 1.4;
+  margin-top: 0.4rem;
+}
+
+.author {
+  font-size: 1.2rem;
+}
+
+.price {
+  font-size: 1.4rem;
+}

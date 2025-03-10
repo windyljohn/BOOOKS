@@ -1,0 +1,86 @@
+.button {
+  padding: 2rem 3rem;
+  display: flex;
+
+  background-color: #fff;
+  gap: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+  border: solid #000 2px;
+
+  position: relative;
+  text-decoration: none;
+  color: #000;
+
+  transition: all 0.2s;
+}
+
+.button:hover {
+  box-shadow: 0 0 0 1px #000;
+
+  .card-book1 {
+    transform: skew(3deg, -3deg) translateY(-10px);
+  }
+  .card-book2 {
+    transform: translateY(-10px);
+  }
+  .card-book3 {
+    transform: skew(-3deg, 3deg) translateY(-10px);
+  }
+}
+
+.icon {
+  -webkit-user-drag: none;
+}
+
+.text {
+  font-size: 2rem;
+}
+
+.card {
+  width: 50%;
+  height: 200%;
+  position: absolute;
+  inset: auto 0% 0% auto;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.card-book1 {
+  z-index: 1;
+  width: 4vw;
+  height: auto;
+  min-width: 1.2rem;
+  margin-bottom: -2rem;
+  margin-right: 3vw;
+  position: absolute;
+  inset: auto 0% 0% auto;
+  transition: all 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.card-book2 {
+  z-index: 2;
+  width: 3.5vw;
+  height: auto;
+  min-width: 1.04rem;
+  margin-bottom: -2rem;
+  margin-right: 2.5vw;
+  position: absolute;
+  inset: auto 0% 0% auto;
+  transition: all 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.card-book3 {
+  z-index: 3;
+  width: 3.75vw;
+  height: auto;
+  min-width: 1.12rem;
+  margin-bottom: -2rem;
+  margin-right: 1vw;
+  position: absolute;
+  inset: auto 0% 0% auto;
+  transition: all 0.2s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}

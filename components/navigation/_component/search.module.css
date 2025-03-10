@@ -1,0 +1,24 @@
+.section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  height: 2rem;
+}
+
+.input {
+  padding-left: 1rem;
+  padding: 1rem;
+  height: 2rem;
+  width: 20rem;
+  font-size: 1.2rem;
+  color: #707070;
+  border: solid 1.5px #000;
+}
+
+.action {
+  cursor: pointer;
+}
+
+.icon {
+  -webkit-user-drag: none;
+}
