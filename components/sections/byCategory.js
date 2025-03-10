@@ -1,6 +1,6 @@
 import BookCategory from "./bookCategory";
 
-import classes from "./ByCategory.module.css";
+import classes from "./byCategory.module.css";
 
 export default function ByCategory({ title, category, typeCategory }) {
   return (
