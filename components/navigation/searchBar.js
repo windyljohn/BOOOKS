@@ -51,7 +51,9 @@ export default function SearchBar({ ref, onClose }) {
 
   useEffect(() => {
     async function fetchInitData() {
-      const res = await fetch(`http://localhost:3000/api/books/`);
+      const res = await fetch(
+        process.env.NEXT_PUBLIC_SERVER_URL + `api/books/`
+      );
       const { books } = await res.json();
       setInitData(books);
     }
@@ -69,7 +71,8 @@ export default function SearchBar({ ref, onClose }) {
 
       if (debouncedSearchTerm && searchTerm.trim() != "") {
         const res = await fetch(
-          `http://localhost:3000/api/books/search/${debouncedSearchTerm}`
+          process.env.NEXT_PUBLIC_SERVER_URL +
+            `api/books/search/${debouncedSearchTerm}`
         );
         const { books } = await res.json();
         books.length = Math.min(books.length, 8);
