@@ -18,7 +18,7 @@ export async function generateMetadata({ params }) {
 async function getBooksByCategory(category) {
   try {
     const res = await fetch(
-      `http://localhost:3000/api/books/category/${category}`
+      process.env.NEXT_PUBLIC_SERVER_URL + `api/books/category/${category}`
     );
     return res.json();
   } catch (error) {

@@ -12,7 +12,9 @@ export async function generateMetadata({ params }) {
 
 async function getSearchResult(title) {
   try {
-    const res = await fetch(`http://localhost:3000/api/books/search/${title}`);
+    const res = await fetch(
+      process.env.NEXT_PUBLIC_SERVER_URL + `api/books/search/${title}`
+    );
     return res.json();
   } catch (error) {
     console.error("Failed to get book", error);

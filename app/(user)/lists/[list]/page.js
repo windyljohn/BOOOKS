@@ -19,7 +19,9 @@ export async function generateMetadata({ params }) {
 
 async function getBookByList(list) {
   try {
-    const res = await fetch(`http://localhost:3000/api/books/lists/${list}`);
+    const res = await fetch(
+      process.env.NEXT_PUBLIC_SERVER_URL + `api/books/lists/${list}`
+    );
     return res.json();
   } catch (error) {
     return console.log("Failed to get books", error);

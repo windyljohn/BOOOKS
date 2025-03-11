@@ -2,7 +2,9 @@ import BooksItem from "../_components/bookItem";
 
 async function getBook(bookId) {
   try {
-    const res = await fetch(`http://localhost:3000/api/books/${bookId}`);
+    const res = await fetch(
+      process.env.NEXT_PUBLIC_SERVER_URL + `api/books/${bookId}`
+    );
     return res.json();
   } catch (error) {
     console.error("Failed to get book", error);
