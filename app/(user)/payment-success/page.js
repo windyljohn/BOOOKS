@@ -1,4 +1,4 @@
-import PaymentSucess from "./_components/paymentSuccess";
+import PaymentSuccess from "./_components/paymentSuccess";
 
 export const metadata = {
   title: "Payment Success | BOOOKS",
@@ -6,5 +6,5 @@ export const metadata = {
 };
 
 export default function SuccessPage() {
-  return <PaymentSucess />;
+  return <PaymentSuccess />;
 }

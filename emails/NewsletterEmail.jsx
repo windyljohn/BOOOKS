@@ -71,7 +71,7 @@ export default function NewsletterEmail({}) {
                 }}
               >
                 <Link
-                  href="http://localhost:3000/"
+                  href="https://boooks-nine.vercel.app/"
                   style={{
                     fontSize: "12px",
                     fontFamily: "GT Walsheim Pro",
