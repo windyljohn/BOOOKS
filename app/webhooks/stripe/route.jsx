@@ -41,5 +41,5 @@ export async function POST(req) {
     });
   }
 
-  return new NextResponse();
+  return new NextResponse({ message: "Success" }, { status: 200 });
 }
