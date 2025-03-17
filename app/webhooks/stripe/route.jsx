@@ -7,8 +7,9 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req) {
+  let event;
   try {
-    const event = stripe.webhooks.constructEvent(
+    event = stripe.webhooks.constructEvent(
       await req.body(),
       req.headers.get("stripe-signature"),
       process.env.STRIPE_WEBHOOK_SECRET
@@ -43,6 +44,6 @@ export async function POST(req) {
     }
     return NextResponse.json({ success: "Success" }, { status: 200 });
   } catch (error) {
-    return NextResponse.json({ message: error }, { status: 502 });
+    return NextResponse.json({ message: event }, { status: 502 });
   }
 }
