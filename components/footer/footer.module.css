@@ -21,8 +21,9 @@
 
 .wrapper {
   display: flex;
-  gap: 90rem;
+  justify-content: space-between;
   margin-bottom: 6rem;
+  gap: 5rem;
 }
 
 .main-col {
