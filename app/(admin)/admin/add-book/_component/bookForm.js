@@ -68,7 +68,6 @@ export default function BookForm() {
   async function handleSubmit(e) {
     e.preventDefault();
     setIsLoading(true);
-    console.log(bookData);
 
     if (complete) {
       const res = await fetch("/api/books", {

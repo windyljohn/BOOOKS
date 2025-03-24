@@ -1,7 +1,7 @@
 import BookForm from "./_component/bookForm";
 
 export const metadata = {
-  title: "Upload Book | BOOOKS",
+  title: "Upload Book | Admin BOOOKS",
   description: "Created by wind",
 };
 

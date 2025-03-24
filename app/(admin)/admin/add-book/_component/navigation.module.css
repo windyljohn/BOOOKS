@@ -35,6 +35,13 @@
   font-family: "GT Walsheim Pro Bold";
 }
 
+.icons {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
 .icons button {
   background: #fff;
   border: none;
