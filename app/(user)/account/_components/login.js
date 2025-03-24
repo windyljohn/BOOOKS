@@ -6,7 +6,7 @@ import Image from "next/image";
 import classes from "./login.module.css";
 import backgroundImage from "@/images/background-image-account.jpg";
 
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
 import { authenticate } from "@/lib/actions";
 import { useSearchParams } from "next/navigation";
 
@@ -17,6 +17,11 @@ export default function Login() {
     authenticate,
     undefined
   );
+
+  useEffect(() => {
+    document.getElementById("email").focus();
+  });
+
   return (
     <section className={classes.section}>
       <Image
