@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import classes from "./login.module.css";
-import backgroundImage from "@/images/background-image-account.jpg";
+import backgroundImage from "@/images/background-image-account.webp";
 
 import { useActionState, useEffect } from "react";
 import { authenticate } from "@/lib/actions";

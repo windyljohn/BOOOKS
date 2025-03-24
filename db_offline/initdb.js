@@ -1,9 +1,3 @@
-import image1 from "@/images/image1.webp";
-import image2 from "@/images/image2.webp";
-import image3 from "@/images/image3.webp";
-import image4 from "@/images/image4.webp";
-import image5 from "@/images/image5.webp";
-
 import biographyIcon from "@/icons/category/user.svg";
 import businessIcon from "@/icons/category/bar-chart-2.svg";
 import designIcon from "@/icons/category/edit-3.svg";
@@ -109,122 +103,87 @@ import rocketIcon from "@/icons/series/rocket.svg";
 import ringIcon from "@/icons/series/ring.svg";
 import atomIcon from "@/icons/series/atom.svg";
 
-import court1 from "@/images/series/court-1.jpg";
-import court2 from "@/images/series/court-2.jpg";
-import court3 from "@/images/series/court-3.jpg";
-
-import dune1 from "@/images/series/dune-1.jpeg";
-import dune2 from "@/images/series/dune-2.jpeg";
-import dune3 from "@/images/series/dune-3.jpeg";
-
-import harry1 from "@/images/series/harry-potter-1.jpg";
-import harry2 from "@/images/series/harry-potter-2.jpg";
-import harry3 from "@/images/series/harry-potter-3.jpg";
-
-import incerto1 from "@/images/series/incerto-1.jpeg";
-import incerto2 from "@/images/series/incerto-2.jpeg";
-import incerto3 from "@/images/series/incerto-3.jpeg";
-
-import percy1 from "@/images/series/percy-1.jpg";
-import percy2 from "@/images/series/percy-2.jpg";
-import percy3 from "@/images/series/percy-3.webp";
-
-import stranger1 from "@/images/series/stranger-1.jpg";
-import stranger2 from "@/images/series/stranger-2.jpg";
-import stranger3 from "@/images/series/stranger-3.jpg";
-
-import hitchHiker1 from "@/images/series/hitchhiker-1.jpg";
-import hitchHiker2 from "@/images/series/hitchhiker-2.jpg";
-import hitchHiker3 from "@/images/series/hitchhiker-3.jpg";
-
-import lord1 from "@/images/series/lord-1.jpg";
-import lord2 from "@/images/series/lord-2.jpg";
-import lord3 from "@/images/series/lord-3.jpg";
-
-import threeBody1 from "@/images/series/three-body-1.jpeg";
-import threeBody2 from "@/images/series/three-body-2.jpeg";
-import threeBody3 from "@/images/series/three-body-3.jpeg";
-
 export const SERIES = [
   {
     title: "A Court of Thorns And Roses",
     href: "a_court_of_thorns_and_roses",
     icon: roseIcon,
-    book1: court1,
-    book2: court2,
-    book3: court3,
+    book1: "https://m.media-amazon.com/images/I/81U27X4m6EL._SY522_.jpg",
+    book2: "https://m.media-amazon.com/images/I/51NFof0I0qL._SY445_SX342_.jpg",
+    book3: "https://m.media-amazon.com/images/I/51FgxGdVh5L._SY445_SX342_.jpg",
   },
   {
     title: "Dune",
     href: "dune",
     icon: planetIcon,
-    book1: dune1,
-    book2: dune2,
-    book3: dune3,
+    book1: "https://m.media-amazon.com/images/I/41BajT0B3UL._SY445_SX342_.jpg",
+    book2: "https://m.media-amazon.com/images/I/41JU2LkT45L._SY445_SX342_.jpg",
+    book3: "https://m.media-amazon.com/images/I/41uBViwic5L._SY445_SX342_.jpg",
   },
   {
     title: "Game Of Thrones",
     href: "game_of_thrones",
     icon: dragonIcon,
-    book1: gotImg1,
-    book2: gotImg2,
-    book3: gotImg3,
+    book1: "https://m.media-amazon.com/images/I/51e9blEl+LL._SY445_SX342_.jpg",
+    book2: "https://m.media-amazon.com/images/I/51a9m8YgauL._SY445_SX342_.jpg",
+    book3: "https://m.media-amazon.com/images/I/51D+-f5UcDL._SY445_SX342_.jpg",
   },
   {
     title: "Harry Potter",
     href: "harry_potter",
     icon: wandIcon,
-    book1: harry1,
-    book2: harry2,
-    book3: harry3,
+    book1: "https://m.media-amazon.com/images/I/514HX6+75OL._SY445_SX342_.jpg",
+    book2: "https://m.media-amazon.com/images/I/513q+PF6cZL._SY445_SX342_.jpg",
+    book3: "https://m.media-amazon.com/images/I/517CL0lWQ-L._SY445_SX342_.jpg",
   },
   {
     title: "Incerto",
     href: "incerto",
     icon: diceIcon,
-    book1: incerto1,
-    book2: incerto2,
-    book3: incerto3,
+    book1: "https://m.media-amazon.com/images/I/41BrceqW3rL._SY445_SX342_.jpg",
+    book2: "https://m.media-amazon.com/images/I/51jkBbZzJVL._SY522_.jpg",
+    book3: "https://m.media-amazon.com/images/I/311ZkT9OczL._SY445_SX342_.jpg",
   },
   {
     title: "Percy Jackson And The Olympians",
     href: "percy_jackson_and_the_olympians",
     icon: boltIcon,
-    book1: percy1,
-    book2: percy2,
-    book3: percy3,
+    book1: "https://m.media-amazon.com/images/I/61dAL6mARBL._SY445_SX342_.jpg",
+    book2: "https://m.media-amazon.com/images/I/51ZwX2CfoaL._SY445_SX342_.jpg",
+    book3: "https://m.media-amazon.com/images/I/51LdV0opNvL._SY445_SX342_.jpg",
   },
   {
     title: "Stranger Things",
     href: "stranger_things",
     icon: radioIcon,
-    book1: stranger1,
-    book2: stranger2,
-    book3: stranger3,
+    book1: "https://m.media-amazon.com/images/I/51GuaA0KQeL._SY445_SX342_.jpg",
+    book2: "https://m.media-amazon.com/images/I/41O4LAaZdtL._SY445_SX342_.jpg",
+    book3: "https://m.media-amazon.com/images/I/41MR1YzSk-L._SY445_SX342_.jpg",
   },
   {
     title: "The Hitchhikers Guide To The Galaxy",
     href: "the_hitchhikers_guide_to_the_galaxy",
     icon: rocketIcon,
-    book1: hitchHiker1,
-    book2: hitchHiker2,
-    book3: hitchHiker3,
+    book1: "https://m.media-amazon.com/images/I/41gW7uJ2SOL._SY445_SX342_.jpg",
+    book2: "https://m.media-amazon.com/images/I/51mkUgb4PWL._SY445_SX342_.jpg",
+    book3:
+      "https://cdn.prod.website-files.com/61cb87c118979013b4f7938b/62b2134576b43bd6cbf1caa3_The%20Hitch-Hiker%27s%20Guide%20to%20The%20Galaxy%20.jpg",
   },
   {
     title: "The Lord Of The Rings",
     href: "the_lord_of_the_rings",
     icon: ringIcon,
-    book1: lord1,
-    book2: lord2,
-    book3: lord3,
+    book1: "https://m.media-amazon.com/images/I/41KPaTTRxFL._SY445_SX342_.jpg",
+    book2: "https://m.media-amazon.com/images/I/41Lr-35uz8L._SY445_SX342_.jpg",
+    book3: "https://m.media-amazon.com/images/I/51HNV1J3UyL._SY445_SX342_.jpg",
   },
   {
     title: "Three Body Problem",
     href: "three_body_problem",
     icon: atomIcon,
-    book1: threeBody1,
-    book2: threeBody2,
-    book3: threeBody3,
+    book1: "https://m.media-amazon.com/images/I/51DOz4yMk7L._SY445_SX342_.jpg",
+    book2: "https://m.media-amazon.com/images/I/51qUdpV5T0L._SY445_SX342_.jpg",
+    book3: "https://m.media-amazon.com/images/I/51ohFqjH4lL._SY445_SX342_.jpg",
   },
 ];
 
@@ -237,162 +196,70 @@ import womanIcon from "@/icons/lists/woman.svg";
 import manIcon from "@/icons/lists/man.svg";
 import mentalHealthIcon from "@/icons/lists/hands-brain.svg";
 
-import crypto1 from "@/images/lists/cryptocurrency-1.webp";
-import crypto2 from "@/images/lists/cryptocurrency-2.webp";
-import crypto3 from "@/images/lists/cryptocurrency-3.webp";
-
-import personal1 from "@/images/lists/personal-development-1.webp";
-import personal2 from "@/images/lists/personal-development-2.webp";
-import personal3 from "@/images/lists/personal-development-3.webp";
-
-import environment1 from "@/images/lists/environment-1.webp";
-import environment2 from "@/images/lists/environment-2.webp";
-import environment3 from "@/images/lists/environment-3.webp";
-
-import billionaire1 from "@/images/lists/billionaires-1.jpg";
-import billionaire2 from "@/images/lists/billionaires-2.jpg";
-import billionaire3 from "@/images/lists/billionaires-3.jpg";
-
-import fiction1 from "@/images/lists/fiction-1.jpg";
-import fiction2 from "@/images/lists/fiction-2.jpg";
-import fiction3 from "@/images/lists/fiction-3.jpg";
-
-import woman1 from "@/images/lists/woman-1.webp";
-import woman2 from "@/images/lists/woman-2.webp";
-import woman3 from "@/images/lists/woman-3.webp";
-
-import men1 from "@/images/lists/men-1.webp";
-import men2 from "@/images/lists/men-2.webp";
-import men3 from "@/images/lists/men-3.webp";
-
-import mental1 from "@/images/lists/mental-health-1.webp";
-import mental2 from "@/images/lists/mental-health-2.webp";
-import mental3 from "@/images/lists/mental-health-3.webp";
-
 export const FEATURED_LISTS = [
   {
     title: "Best Cryptocurrency Books",
     icon: cryptoIcon,
     href: "best_cryptocurrency_books",
-    book1: crypto1,
-    book2: crypto2,
-    book3: crypto3,
+    book1: "https://m.media-amazon.com/images/I/51TDyaEvhcL._SY445_SX342_.jpg",
+    book2: "https://m.media-amazon.com/images/I/513Y9o+S-HL._SY445_SX342_.jpg",
+    book3: "https://m.media-amazon.com/images/I/41x6NvXWekS._SY445_SX342_.jpg",
   },
   {
     title: "Best Personal Development Books",
     icon: personalIcon,
     href: "best_personal_development_books",
-    book1: personal1,
-    book2: personal2,
-    book3: personal3,
+    book1: "https://m.media-amazon.com/images/I/81ANaVZk5LL._SY522_.jpg",
+    book2: "https://m.media-amazon.com/images/I/41uJR7e6FYL._SY445_SX342_.jpg",
+    book3: "https://m.media-amazon.com/images/I/91ZEUnFeUSL._SY445_SX342_.jpg",
   },
   {
     title: "Best Environment Books",
     icon: leafIcon,
     href: "best_environment_books",
-    book1: environment1,
-    book2: environment2,
-    book3: environment3,
+    book1: "https://m.media-amazon.com/images/I/4190MeeTfyL._SY445_SX342_.jpg",
+    book2: "https://m.media-amazon.com/images/I/31o1HlWIJUL._SY445_SX342_.jpg",
+    book3: "https://m.media-amazon.com/images/I/41VJZ8WUW7L._SY445_SX342_.jpg",
   },
   {
     title: "Books Billionaires Read",
     icon: suitCaseicon,
     href: "books_billionaires_read",
-    book1: billionaire1,
-    book2: billionaire2,
-    book3: billionaire3,
+    book1: "https://m.media-amazon.com/images/I/51DSHKCi1JL._SY445_SX342_.jpg",
+    book2: "https://m.media-amazon.com/images/I/31SJUjkn4TL._SY445_SX342_.jpg",
+    book3: "https://m.media-amazon.com/images/I/41HY51DngNL._SY445_SX342_.jpg",
   },
   {
     title: "Best Fiction Books",
     icon: wandIcon,
     href: "best_fiction_books",
-    book1: fiction1,
-    book2: fiction2,
-    book3: fiction3,
+    book1: "https://m.media-amazon.com/images/I/81TLiZrasVL._SY522_.jpg",
+    book2: "https://m.media-amazon.com/images/I/81IS65EOrvL._SY522_.jpg",
+    book3: "https://m.media-amazon.com/images/I/71ATAtJHP0L._SY522_.jpg",
   },
   {
     title: "Best Books For Women",
     icon: womanIcon,
     href: "best_books_for_women",
-    book1: woman1,
-    book2: woman2,
-    book3: woman3,
+    book1: "https://m.media-amazon.com/images/I/31SIqrjGdgL._SY445_SX342_.jpg",
+    book2: "https://m.media-amazon.com/images/I/4182X3CC8NL._SY445_SX342_.jpg",
+    book3: "https://m.media-amazon.com/images/I/31zzmiNcUuL._SY445_SX342_.jpg",
   },
   {
     title: "Best Books For Men",
     icon: manIcon,
     href: "best_books_for_men",
-    book1: men1,
-    book2: men2,
-    book3: men3,
+    book1: "https://m.media-amazon.com/images/I/41-zfEP60QL._SY445_SX342_.jpg",
+    book2: "https://m.media-amazon.com/images/I/31hSni7bS6L._SY445_SX342_.jpg",
+    book3: "https://m.media-amazon.com/images/I/71CXmQNVKzL._SY522_.jpg",
   },
   {
     title: "Best Mental Health Books",
     icon: mentalHealthIcon,
     href: "best_mental_health_books",
-    book1: mental1,
-    book2: mental2,
-    book3: mental3,
-  },
-];
-
-import gotImg1 from "@/images/GOT/GOT1.jpg";
-import gotImg2 from "@/images/GOT/GOT2.jpg";
-import gotImg3 from "@/images/GOT/GOT3.jpg";
-import gotImg4 from "@/images/GOT/GOT4.jpg";
-import gotImg5 from "@/images/GOT/GOT5.jpg";
-
-export const GAME_OF_THRONES = [
-  {
-    title: "A Game of Thrones",
-    author: "George R.R. Martin",
-    price: "$12.99",
-    image: gotImg1,
-  },
-  {
-    title: "A Clash of Kings",
-    author: "George R.R. Martin",
-    price: "$12.99",
-    image: gotImg2,
-  },
-  {
-    title: "A Storm of Swords",
-    author: "George R.R. Martin",
-    price: "$12.99",
-    image: gotImg3,
-  },
-  {
-    title: "A Feast for Crows",
-    author: "George R.R. Martin",
-    price: "$12.99",
-    image: gotImg4,
-  },
-  {
-    title: "A Dance with Dragons",
-    author: "George R.R. Martin",
-    price: "$12.99",
-    image: gotImg5,
-  },
-];
-
-export const SEARCH_INIT = [
-  {
-    title: "Principles",
-    author: "Ray Dalio",
-    price: 12.99,
-    image: image3,
-  },
-  {
-    title: "Zero to One",
-    author: "Peter Thiel",
-    price: 12.99,
-    image: image4,
-  },
-  {
-    title: "Thinking, Fast and Slow",
-    author: "Daniel Kahneman",
-    price: 12.99,
-    image: image5,
+    book1: "https://m.media-amazon.com/images/I/41dABwfpV-L._SY445_SX342_.jpg",
+    book2: "https://m.media-amazon.com/images/I/51FEq4osf7L._SY445_SX342_.jpg",
+    book3: "https://m.media-amazon.com/images/I/814x9YyN0LL._SY522_.jpg",
   },
 ];
 

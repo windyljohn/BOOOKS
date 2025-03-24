@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import backgroundImage from "@/images/background-image.jpg";
+import backgroundImage from "@/images/background-image.webp";
 
 import classes from "../sections/hero.module.css";
-import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
