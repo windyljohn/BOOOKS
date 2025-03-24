@@ -34,8 +34,6 @@ export default function BookForm({
 
   useEffect(() => {
     setComplete(true);
-
-    startingBookData.title = "wind";
     const cat = document.getElementsByName("category");
     cat.forEach((x) =>
       category.includes(x.value) ? (x.checked = true) : null
