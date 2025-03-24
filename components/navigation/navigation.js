@@ -19,6 +19,7 @@ export default function Navigation() {
   const [toggle, setToggle] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const router = useRouter();
+  const [initData, setInitData] = useState([]);
 
   const ref = useClickAway((ref) => {
     if (ref.target.name == "search") return;
@@ -57,10 +58,24 @@ export default function Navigation() {
     }
   }, [toggle]);
 
+  useEffect(() => {
+    async function fetchInitData() {
+      const res = await fetch(
+        process.env.NEXT_PUBLIC_SERVER_URL + `api/books/`
+      );
+      const { books } = await res.json();
+      setInitData(books);
+    }
+
+    fetchInitData();
+  }, []);
+
   return (
     <header className={classes["header-wrapper"]}>
       <AnimatePresence>
-        {toggle && <SearchBar onClose={handleToggle} ref={ref} />}
+        {toggle && (
+          <SearchBar onClose={handleToggle} ref={ref} books={initData} />
+        )}
       </AnimatePresence>
       <div className={classes["navigation-wrapper"]}>
         <nav className={classes.navigation}>

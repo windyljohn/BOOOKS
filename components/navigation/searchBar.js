@@ -14,10 +14,11 @@ import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { useDebounce } from "@uidotdev/usehooks";
 
-export default function SearchBar({ ref, onClose }) {
+export default function SearchBar({ ref, onClose, books }) {
+  console.log(books);
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResult, setSearchResult] = useState(null);
-  const [initData, setInitData] = useState([]);
+
   const [isSearching, setIsSearching] = useState(false);
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
   const router = useRouter();
@@ -49,17 +50,17 @@ export default function SearchBar({ ref, onClose }) {
     []
   );
 
-  useEffect(() => {
-    async function fetchInitData() {
-      const res = await fetch(
-        process.env.NEXT_PUBLIC_SERVER_URL + `api/books/`
-      );
-      const { books } = await res.json();
-      setInitData(books);
-    }
+  // useEffect(() => {
+  //   async function fetchInitData() {
+  //     const res = await fetch(
+  //       process.env.NEXT_PUBLIC_SERVER_URL + `api/books/`
+  //     );
+  //     const { books } = await res.json();
+  //     setInitData(books);
+  //   }
 
-    fetchInitData();
-  }, []);
+  //   fetchInitData();
+  // }, []);
 
   useEffect(() => {
     async function fetchBooks() {
@@ -173,7 +174,7 @@ export default function SearchBar({ ref, onClose }) {
                   </Link>
                 </div>
                 <div className={classes["books-init"]}>
-                  {initData.slice(6, 12).map((book) => (
+                  {books.slice(6, 12).map((book) => (
                     <div onClick={onClose} key={book.title}>
                       <BookItem key={book.title} {...book} />
                     </div>
@@ -217,7 +218,7 @@ export default function SearchBar({ ref, onClose }) {
                       </Link>
                     </div>
                     <div className={classes["books-init"]}>
-                      {initData.slice(0, 7).map((book) => (
+                      {books.slice(0, 7).map((book) => (
                         <div onClick={onClose} key={book.title}>
                           <BookItem key={book.title} {...book} />
                         </div>
