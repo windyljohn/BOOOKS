@@ -15,7 +15,6 @@ import { motion } from "framer-motion";
 import { useDebounce } from "@uidotdev/usehooks";
 
 export default function SearchBar({ ref, onClose, books }) {
-  console.log(books);
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResult, setSearchResult] = useState(null);
 
