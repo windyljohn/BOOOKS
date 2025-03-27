@@ -25,3 +25,10 @@ input:focus,
 textarea:focus {
   outline: none;
 }
+
+@media (max-width: 1024px) {
+  html,
+  body {
+    font-size: 45%;
+  }
+}

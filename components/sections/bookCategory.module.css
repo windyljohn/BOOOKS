@@ -48,7 +48,7 @@
 
 .card-book1 {
   z-index: 1;
-  width: 4vw;
+  width: 72px;
   height: auto;
   min-width: 1.2rem;
   margin-bottom: -2rem;
@@ -61,7 +61,7 @@
 
 .card-book2 {
   z-index: 2;
-  width: 3.5vw;
+  width: 63px;
   height: auto;
   min-width: 1.04rem;
   margin-bottom: -2rem;
@@ -74,7 +74,7 @@
 
 .card-book3 {
   z-index: 3;
-  width: 3.75vw;
+  width: 67.5px;
   height: auto;
   min-width: 1.12rem;
   margin-bottom: -2rem;

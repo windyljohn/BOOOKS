@@ -63,3 +63,10 @@
 .action {
   cursor: pointer;
 }
+
+@media (max-width: 1024px) {
+  .icons img {
+    height: 15px;
+    width: 15px;
+  }
+}

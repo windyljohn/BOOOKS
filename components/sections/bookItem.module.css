@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  max-width: 14rem;
+  justify-self: flex-start;
   min-height: 32rem;
 }
 
@@ -28,6 +28,7 @@
   font-size: 1.6rem;
   line-height: 1.4;
   margin-top: 0.4rem;
+  max-width: 14rem;
 }
 
 .author {
@@ -36,4 +37,11 @@
 
 .price {
   font-size: 1.4rem;
+}
+
+@media (max-width: 1024px) {
+  .book img {
+    width: 100px;
+    height: 150px;
+  }
 }

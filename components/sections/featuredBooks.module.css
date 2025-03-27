@@ -26,3 +26,9 @@
   column-gap: 8.4rem;
   row-gap: 7.5rem;
 }
+
+@media (max-width: 1355px) {
+  .featured-books {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

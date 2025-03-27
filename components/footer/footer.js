@@ -94,37 +94,36 @@ export default function Footer() {
             <Link href="/privacy-policy">BOOOK's Privacy Policy.</Link>
           </p>
         </div>
-        <div className={classes.dropdowns}>
-          <div className={classes["menu-col"]}>
-            <p className={classes.title}>Menu</p>
-            <ul className={classes.links}>
-              {FOOTER_MENU.map((menu) => (
-                <li key={menu.href}>
-                  <Link
-                    href={menu.href}
-                    key={menu.href}
-                    className={
-                      classes[
-                        `${trimmedPathname === menu.href ? "active" : undefined}`
-                      ]
-                    }
-                  >
-                    {menu.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className={classes["contact-col"]}>
-            <p className={classes.title}>Contact Us</p>
-            <ul className={classes.links}>
-              <li>
-                3/F Jade Building, 335 Senator Gil Puyat Avenue, Makati City
+
+        <div className={classes["menu-col"]}>
+          <p className={classes.title}>Menu</p>
+          <ul className={classes.links}>
+            {FOOTER_MENU.map((menu) => (
+              <li key={menu.href}>
+                <Link
+                  href={menu.href}
+                  key={menu.href}
+                  className={
+                    classes[
+                      `${trimmedPathname === menu.href ? "active" : undefined}`
+                    ]
+                  }
+                >
+                  {menu.title}
+                </Link>
               </li>
-              <a href="tel:(63) 927 0734 789">(02) 716-1255</a>
-              <a href="mailto:windylreylado@gmail.com">hello@boooks.com</a>
-            </ul>
-          </div>
+            ))}
+          </ul>
+        </div>
+        <div className={classes["contact-col"]}>
+          <p className={classes.title}>Contact Us</p>
+          <ul className={classes.links}>
+            <li className={classes.address}>
+              3/F Jade Building, 335 Senator Gil Puyat Avenue, Makati City
+            </li>
+            <a href="tel:(63) 927 0734 789">(02) 716-1255</a>
+            <a href="mailto:windylreylado@gmail.com">hello@boooks.com</a>
+          </ul>
         </div>
       </div>
       <div className={classes["footer-line"]}></div>
@@ -149,9 +148,6 @@ export default function Footer() {
             </li>
             <li>
               <Image src={payment3} alt="payment" />
-            </li>
-            <li>
-              <Image src={payment4} alt="payment" />
             </li>
             <li>
               <Image src={payment5} alt="payment" />
