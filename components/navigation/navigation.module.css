@@ -32,6 +32,7 @@
 
 .navigation-mobile img {
   -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .navigation {
@@ -63,6 +64,7 @@
 
 .icon {
   -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .margin {
