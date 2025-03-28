@@ -86,4 +86,8 @@
   .navigation-mobile {
     display: block;
   }
+
+  .navigation-wrapper {
+    padding: 0 2rem;
+  }
 }
