@@ -25,6 +25,15 @@
   z-index: 9999;
 }
 
+.navigation-mobile {
+  cursor: pointer;
+  display: none;
+}
+
+.navigation-mobile img {
+  -webkit-user-drag: none;
+}
+
 .navigation {
   display: flex;
   gap: 2.9rem;
@@ -68,5 +77,13 @@
   .icons img {
     height: 15px;
     width: 15px;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .navigation-mobile {
+    display: block;
   }
 }

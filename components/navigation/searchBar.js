@@ -49,18 +49,6 @@ export default function SearchBar({ ref, onClose, books }) {
     []
   );
 
-  // useEffect(() => {
-  //   async function fetchInitData() {
-  //     const res = await fetch(
-  //       process.env.NEXT_PUBLIC_SERVER_URL + `api/books/`
-  //     );
-  //     const { books } = await res.json();
-  //     setInitData(books);
-  //   }
-
-  //   fetchInitData();
-  // }, []);
-
   useEffect(() => {
     async function fetchBooks() {
       setIsSearching(true);

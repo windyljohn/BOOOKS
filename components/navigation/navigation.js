@@ -7,6 +7,8 @@ import classes from "./navigation.module.css";
 
 import profileIcon from "@/icons/profile.svg";
 import searchIcon from "@/icons/search.svg";
+import menuIcon from "@/icons/menu.png";
+import closeIcon from "@/icons/close.svg";
 import Cart from "./_component/cart";
 import { NAVIGATION } from "@/db_offline/initdb";
 import { AnimatePresence, motion } from "framer-motion";
@@ -14,9 +16,11 @@ import SearchBar from "./searchBar";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useClickAway } from "@uidotdev/usehooks";
+import MobileNavigation from "./navigation-mobile";
 
 export default function Navigation() {
   const [toggle, setToggle] = useState(false);
+  const [toggleMobile, setToggleMobile] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const router = useRouter();
   const [initData, setInitData] = useState([]);
@@ -26,8 +30,18 @@ export default function Navigation() {
     setToggle(false);
   });
 
+  const mobileRef = useClickAway((ref) => {
+    console.log(ref.target);
+    if (ref.target.name == "mobile-nav") return;
+    setToggleMobile(false);
+  });
+
   function handleToggle() {
     setToggle((prev) => !prev);
+  }
+
+  function handleToggleMobile() {
+    setToggleMobile((prev) => !prev);
   }
 
   function handleClose() {
@@ -40,16 +54,6 @@ export default function Navigation() {
     if (toggle) document.getElementById("input").focus();
   }, [toggle]);
 
-  function handleEnter() {
-    document.getElementById("link").click();
-  }
-
-  function handleClick() {
-    if (toggle && searchTerm.trim() !== "") {
-      handleClose();
-    } else handleToggle();
-  }
-
   useEffect(() => {
     if (toggle) {
       document.documentElement.classList.add("search-open");
@@ -57,6 +61,14 @@ export default function Navigation() {
       document.documentElement.classList.remove("search-open");
     }
   }, [toggle]);
+
+  useEffect(() => {
+    if (toggleMobile) {
+      document.documentElement.classList.add("search-open");
+    } else {
+      document.documentElement.classList.remove("search-open");
+    }
+  }, [toggleMobile]);
 
   useEffect(() => {
     async function fetchInitData() {
@@ -77,7 +89,36 @@ export default function Navigation() {
           <SearchBar onClose={handleToggle} ref={ref} books={initData} />
         )}
       </AnimatePresence>
+      <AnimatePresence>
+        {toggleMobile && (
+          <MobileNavigation
+            onCloseMobile={handleToggleMobile}
+            ref={mobileRef}
+          />
+        )}
+      </AnimatePresence>
       <div className={classes["navigation-wrapper"]}>
+        <div className={classes["navigation-mobile"]}>
+          {toggleMobile ? (
+            <Image
+              src={closeIcon}
+              alt="menu icon"
+              width={20}
+              height={20}
+              onClick={handleToggleMobile}
+              name="mobile-nav"
+            />
+          ) : (
+            <Image
+              src={menuIcon}
+              alt="menu icon"
+              width={15}
+              height={15}
+              onClick={handleToggleMobile}
+              name="mobile-nav"
+            />
+          )}
+        </div>
         <nav className={classes.navigation}>
           {NAVIGATION.map((nav) => (
             <motion.div
