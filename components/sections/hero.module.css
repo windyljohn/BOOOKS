@@ -24,6 +24,7 @@
   align-items: center;
   flex-direction: column;
   gap: 2.6rem;
+  padding: 5rem;
 }
 
 .text {
@@ -54,3 +55,9 @@
     aspect-ratio: 9/10;
   }
 }
+
+/* @media (max-width: 591px) {
+  .text-container {
+    align-items: start;
+  }
+} */

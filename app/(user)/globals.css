@@ -32,3 +32,10 @@ textarea:focus {
     font-size: 45%;
   }
 }
+
+@media (max-width: 425px) {
+  html,
+  body {
+    font-size: 30%;
+  }
+}
