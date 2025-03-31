@@ -32,3 +32,15 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+@media (max-width: 700px) {
+  .featured-books {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .featured-books {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
