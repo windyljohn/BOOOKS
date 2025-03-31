@@ -84,3 +84,25 @@
   transition: all 0.2s;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
 }
+
+@media (max-width: 1024px) {
+  .button {
+    padding: 1.5rem 2.5rem;
+  }
+
+  .button:hover {
+    .card-book1 {
+      transform: skew(3deg, -3deg) translateY(-5px);
+    }
+    .card-book2 {
+      transform: translateY(-5px);
+    }
+    .card-book3 {
+      transform: skew(-3deg, 3deg) translateY(-5px);
+    }
+  }
+
+  .card {
+    height: 300%;
+  }
+}
