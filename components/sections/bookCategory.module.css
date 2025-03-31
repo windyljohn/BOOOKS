@@ -106,3 +106,33 @@
     height: 300%;
   }
 }
+
+@media (max-width: 914px) {
+  .card-book1 {
+    margin-right: 3.5vw;
+  }
+
+  .card-book2 {
+    margin-right: 3vw;
+  }
+
+  .card-book3 {
+    margin-right: 1vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .card-book2 {
+    margin-right: 3.5vw;
+  }
+}
+
+@media (max-width: 914px) {
+  .card-book1 {
+    margin-right: 4vw;
+  }
+
+  .card-book2 {
+    margin-right: 4vw;
+  }
+}
