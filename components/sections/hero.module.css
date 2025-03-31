@@ -56,8 +56,8 @@
   }
 }
 
-/* @media (max-width: 591px) {
+@media (max-width: 591px) {
   .text-container {
     align-items: start;
   }
-} */
+}
