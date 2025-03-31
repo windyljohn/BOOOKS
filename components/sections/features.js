@@ -23,13 +23,13 @@ export default function Features() {
             icon={bookIcon}
             title="Endless Choices, Just a Click Away"
             text="Browse a vast collection of books across all genres, ensuring you’ll always find something you love."
-          />{" "}
+          />
           <FeaturesItem
             alt="feature-icon"
             icon={truckIcon}
             title="Books Delivered Directly to You"
             text="Order books online and have them delivered straight to your door for ultimate convenience."
-          />{" "}
+          />
           <FeaturesItem
             alt="feature-icon"
             icon={shoppingCartIcon}

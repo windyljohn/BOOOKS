@@ -20,6 +20,14 @@
 }
 
 .features {
-  display: flex;
-  gap: 5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 5rem;
+}
+
+@media (max-width: 1024px) {
+  .features {
+    row-gap: 5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

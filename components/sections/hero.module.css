@@ -48,3 +48,9 @@
   font-size: 1.6rem;
   color: #fff;
 }
+
+@media (max-width: 1024px) {
+  .section {
+    aspect-ratio: 9/10;
+  }
+}
