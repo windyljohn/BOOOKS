@@ -36,6 +36,6 @@ textarea:focus {
 @media (max-width: 425px) {
   html,
   body {
-    font-size: 35%;
+    font-size: 40%;
   }
 }
