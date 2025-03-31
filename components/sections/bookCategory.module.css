@@ -105,6 +105,18 @@
   .card {
     height: 300%;
   }
+
+  .card-book1 {
+    width: 67px;
+  }
+
+  .card-book2 {
+    width: 58px;
+  }
+
+  .card-book3 {
+    width: 62.5px;
+  }
 }
 
 @media (max-width: 914px) {
