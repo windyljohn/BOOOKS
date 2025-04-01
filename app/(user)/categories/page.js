@@ -2,6 +2,7 @@ import classes from "./page.module.css";
 import BookItem from "@/components/sections/bookItem";
 
 import Pagination from "./_components/pagination";
+import Sidebar from "./_components/sidebar";
 
 export const metadata = {
   title: "All Books | BOOOKS",
@@ -31,7 +32,10 @@ export default async function BooksPage({ params, searchParams }) {
   const entries = books.slice(start, end);
 
   return (
-    <div>
+    <section className={classes.section}>
+      <div className={classes.sidebar}>
+        <Sidebar />
+      </div>
       <p className={classes.header}>All Books</p>
       <div className={classes["books-wrapper"]}>
         <div className={classes["book-items"]}>
@@ -41,6 +45,6 @@ export default async function BooksPage({ params, searchParams }) {
         </div>
         <Pagination length={books.length} perPage={perPage} />
       </div>
-    </div>
+    </section>
   );
 }

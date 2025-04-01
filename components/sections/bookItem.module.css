@@ -33,6 +33,7 @@
 
 .author {
   font-size: 1.2rem;
+  max-width: 14rem;
 }
 
 .price {

@@ -8,10 +8,6 @@
   src: url("../../../../fonts/GT-Walsheim-Pro-Medium.otf");
 }
 
-.sidebar {
-  padding-top: 10rem;
-}
-
 .header {
   font-size: 2rem;
   font-family: "GT Walsheim Pro Bold";
@@ -19,8 +15,7 @@
 
 .categories {
   list-style: none;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 1.7rem;
   font-size: 1.6rem;
   min-width: 20rem;
@@ -40,4 +35,10 @@
   font-family: "GT Walsheim Pro Medium";
   text-decoration: none;
   color: #000;
+}
+
+@media (max-width: 900px) {
+  .categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

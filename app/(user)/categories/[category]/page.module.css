@@ -3,6 +3,15 @@
   src: url("../../../../fonts/GT-Walsheim-Pro-Bold.otf");
 }
 
+.section {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  column-gap: 5rem;
+  padding: 8rem;
+  justify-content: center;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: auto auto;
@@ -16,6 +25,11 @@
   font-family: "GT Walsheim Pro Bold";
   font-size: 4.8rem;
   margin-bottom: 4rem;
+  grid-column: 2/3;
+}
+
+.sidebar {
+  grid-row: 2/3;
 }
 
 .categories {
@@ -42,14 +56,72 @@
 .books-wrapper {
   display: flex;
   flex-direction: column;
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
 
 .book-items {
   display: grid;
-  min-width: 134rem;
   grid-template-columns: repeat(6, auto);
-  justify-content: start;
+  justify-content: center;
   column-gap: 10rem;
   row-gap: 7.5rem;
   margin-bottom: 6rem;
+}
+
+@media (max-width: 1650px) {
+  .book-items {
+    grid-template-columns: repeat(5, auto);
+    column-gap: 8rem;
+  }
+}
+
+@media (max-width: 1420px) {
+  .book-items {
+    column-gap: 5rem;
+  }
+}
+
+@media (max-width: 1244px) {
+  .book-items {
+    grid-template-columns: repeat(4, auto);
+  }
+}
+
+@media (max-width: 1024px) {
+  .book-items {
+    grid-template-columns: repeat(5, auto);
+  }
+}
+
+@media (max-width: 900px) {
+  .section {
+    column-gap: 0;
+  }
+  .sidebar {
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+}
+
+@media (max-width: 770px) {
+  .book-items {
+    grid-template-columns: repeat(4, auto);
+  }
+}
+
+@media (max-width: 610px) {
+  .book-items {
+    grid-template-columns: repeat(3, auto);
+  }
+
+  .header {
+    text-align: center;
+  }
+}
+
+@media (max-width: 485px) {
+  .book-items {
+    grid-template-columns: repeat(2, auto);
+  }
 }
