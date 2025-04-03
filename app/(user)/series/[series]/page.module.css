@@ -37,7 +37,6 @@
 .bottom {
   display: flex;
   justify-content: space-between;
-
   align-items: center;
 }
 
@@ -59,7 +58,6 @@
 }
 
 .explore-wrapper p {
-  /* display: block; */
   width: 11rem;
 }
 

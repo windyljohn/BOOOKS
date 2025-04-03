@@ -52,21 +52,21 @@ export default async function ListDetails({ params, searchParams }) {
   return (
     <section className={classes.section}>
       <div className={classes.wrapper}>
-        <h2 className={classes.header}>{title}</h2>
+        <p className={classes.header}>{title}</p>
         <div className={classes["book-container"]}>
           {entries.map((book) => (
             <BookItemLarge key={book._id} {...book} />
           ))}
         </div>
-      </div>
-      <div className={classes.bottom}>
-        <Link href="/lists" className={classes.explore}>
-          <div className={classes["explore-wrapper"]}>
-            <p>Explore all lists</p>
-            <Image src={arrowRight} alt="arrow-icon" height={20} width={20} />
-          </div>
-        </Link>
-        <Pagination length={list.length} perPage={perPage} />
+        <div className={classes.bottom}>
+          <Link href="/lists" className={classes.explore}>
+            <div className={classes["explore-wrapper"]}>
+              <p>Explore all lists</p>
+              <Image src={arrowRight} alt="arrow-icon" height={20} width={20} />
+            </div>
+          </Link>
+          <Pagination length={list.length} perPage={perPage} />
+        </div>
       </div>
     </section>
   );
