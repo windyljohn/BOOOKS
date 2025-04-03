@@ -15,6 +15,7 @@
   font-family: "GT Walsheim Pro Bold";
   font-size: 4.8rem;
   margin-bottom: 12.5rem;
+  text-align: center;
 }
 
 .wrapper {
@@ -34,11 +35,17 @@
 @media (max-width: 914px) {
   .wrapper {
     grid-template-columns: 1fr;
+    row-gap: 10rem;
   }
 }
 
 @media (max-width: 590px) {
   .section {
-    padding: 5rem;
+    padding: 3rem;
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;
+    row-gap: 12rem;
   }
 }
