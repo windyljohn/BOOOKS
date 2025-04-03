@@ -109,3 +109,15 @@
   text-align: center;
   font-size: 1.4rem;
 }
+
+@media (max-width: 1024px) {
+  .section {
+    aspect-ratio: 9/10;
+  }
+}
+
+@media (max-width: 591px) {
+  .text-container {
+    align-items: start;
+  }
+}
