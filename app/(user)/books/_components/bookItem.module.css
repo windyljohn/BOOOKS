@@ -15,22 +15,23 @@
 
 .section {
   padding: 12rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .wrapper {
-  max-width: 110rem;
-  display: flex;
-  gap: 12.7rem;
-  justify-content: center;
+  max-width: 120rem;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 10rem;
+  justify-self: center;
 }
 
 .image {
   -webkit-user-drag: none;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
   transition: all 0.25s;
+  height: 100%;
+  width: auto;
+  justify-self: right;
 }
 
 .image:hover {
@@ -107,4 +108,22 @@
 .button p {
   font-family: "GT Walsheim Pro Medium";
   color: #fff;
+}
+
+@media (max-width: 1180px) {
+  .wrapper {
+    gap: 8rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    gap: 8rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    gap: 8rem;
+  }
 }

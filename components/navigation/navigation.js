@@ -31,7 +31,6 @@ export default function Navigation() {
   });
 
   const mobileRef = useClickAway((ref) => {
-    console.log(ref.target);
     if (ref.target.name == "mobile-nav") return;
     setToggleMobile(false);
   });
