@@ -46,8 +46,9 @@
 }
 
 .content {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 4fr 5fr;
+  column-gap: 10rem;
 }
 
 .cart-wrapper {
@@ -146,4 +147,17 @@
   width: 3.6rem;
   height: 100%;
   -webkit-user-drag: none;
+}
+
+@media (max-width: 880px) {
+  .content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+
+    row-gap: 5rem;
+  }
+
+  .checkout-wrapper {
+    grid-row: 1/2;
+  }
 }

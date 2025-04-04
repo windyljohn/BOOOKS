@@ -101,9 +101,7 @@ export default function CartPage() {
                     <li>
                       <Image src={payment2} alt="payment" />
                     </li>
-                    <li>
-                      <Image src={payment3} alt="payment" />
-                    </li>
+
                     <li>
                       <Image src={payment4} alt="payment" />
                     </li>
