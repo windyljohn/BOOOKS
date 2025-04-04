@@ -148,6 +148,7 @@
   .author {
     text-align: center;
     font-size: 2rem;
+    margin-bottom: 2rem;
   }
   .category-wrapper {
     justify-content: center;
