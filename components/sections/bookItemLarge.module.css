@@ -46,4 +46,8 @@
   .image {
     width: 150px;
   }
+
+  .title {
+    font-size: 1.8rem;
+  }
 }
