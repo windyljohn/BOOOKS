@@ -11,7 +11,6 @@
 .overlay {
   width: 100%;
   height: 100%;
-
   background-color: #000;
   opacity: 0.3;
   position: fixed;
@@ -26,11 +25,11 @@
   background-color: #fff;
   z-index: 9999;
   width: 100%;
+  overflow-y: hidden;
 }
 
 .search-header {
   padding: 8rem 12rem 0 12rem;
-
   margin-bottom: 4rem;
 }
 
@@ -68,14 +67,14 @@
 }
 
 .search-content {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
   padding: 0 12rem 6rem 12rem;
   gap: 10rem;
-  justify-content: space-between;
 }
 
-.recent-search {
-  width: 20rem;
+.search-result {
+  padding: 0 12rem 6rem 12rem;
 }
 
 .content-books {
@@ -86,7 +85,6 @@
   font-family: "GT Walsheim Pro Medium";
   font-size: 1.6rem;
   margin-bottom: 1.6rem;
-  width: 100%;
 }
 
 .recent-header-no-result {
@@ -96,15 +94,19 @@
 }
 
 .recents {
-  list-style: none;
-  font-size: 1.6rem;
   display: flex;
   flex-direction: column;
+  font-size: 1.6rem;
   gap: 1.8rem;
+  line-height: 1.4;
+  justify-content: flex-start;
+  max-width: 20rem;
 }
 
-.recents li {
+.recent-key {
   cursor: pointer;
+  flex-wrap: wrap;
+  overflow-wrap: break-word;
 }
 
 .no-result {
@@ -117,6 +119,7 @@
 
 .no-result span {
   font-family: "GT Walsheim Pro Medium";
+  overflow-wrap: break-word;
 }
 
 .books-header {
@@ -142,7 +145,79 @@
 }
 
 .books-init {
-  display: flex;
-  gap: 8.5rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  column-gap: 5rem;
+  row-gap: 20rem;
   height: 36rem;
+}
+
+@media (max-width: 1735px) {
+  .books-init {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 1735px) {
+  .search-content {
+    gap: 7rem;
+  }
+  .books-init {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .search-header {
+    padding: 8rem 8rem 0 8rem;
+    margin-bottom: 4rem;
+  }
+
+  .search-content,
+  .search-result {
+    padding: 0 8rem 6rem 8rem;
+    gap: 10rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  .search-content {
+    gap: 2rem;
+  }
+  .books-init {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .search-header {
+    padding: 8rem 4rem 0 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .search-content,
+  .search-result {
+    padding: 0 4rem 6rem 4rem;
+  }
+  .books-init {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 585px) {
+  .books-init {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 455px) {
+  .content-books {
+    display: none;
+  }
+
+  .content-recommendation {
+    display: none;
+  }
+
+  .recents {
+    max-width: 50rem;
+  }
 }

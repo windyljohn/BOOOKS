@@ -133,90 +133,91 @@ export default function SearchBar({ ref, onClose, books }) {
             />
           </div>
         </div>
-        <div className={classes["search-content"]}>
-          {searchResult?.length == 0 ? (
-            <>
-              <div className={classes["content-recent"]}>
-                <p className={classes["recent-header-no-result"]}>
-                  No matching results
+        {searchResult?.length == 0 ? (
+          <div className={classes["search-content"]}>
+            <div className={classes["content-recent"]}>
+              <p className={classes["recent-header-no-result"]}>
+                No matching results
+              </p>
+              <div className={classes["no-result"]}>
+                <p>
+                  Your search <span>"{searchTerm}" </span>
+                  did not return any results
                 </p>
-                <div className={classes["no-result"]}>
-                  <p>
-                    Your search <span>"{searchTerm}" </span>
-                    did not return any results
-                  </p>
-                  <p>
-                    Check your spelling or try again with a less specific
-                    keyword.
-                  </p>
-                </div>
+                <p>
+                  Check your spelling or try again with a less specific keyword.
+                </p>
               </div>
-              <div>
+            </div>
+            <div className={classes["content-recommendation"]}>
+              <div className={classes["books-header"]}>
+                <p className={classes["books-header-title"]}>
+                  Recommended Books
+                </p>
+                <Link href="/top-100" onClick={onClose}>
+                  See all
+                </Link>
+              </div>
+              <div className={classes["books-init"]}>
+                {books.slice(5, 12).map((book) => (
+                  <div onClick={onClose} key={book.title}>
+                    <BookItem key={book.title} {...book} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        ) : (
+          <>
+            {searchResult ? (
+              <div className={classes["search-result"]}>
                 <div className={classes["books-header"]}>
-                  <p className={classes["books-header-title"]}>
-                    Recommended Books
-                  </p>
-                  <Link href="/top-100" onClick={onClose}>
-                    See all
-                  </Link>
+                  <p className={classes["books-header-title"]}>Books</p>
+                  <a onClick={() => handleEnter()}>See all</a>
                 </div>
                 <div className={classes["books-init"]}>
-                  {books.slice(6, 12).map((book) => (
+                  {searchResult.map((book) => (
                     <div onClick={onClose} key={book.title}>
                       <BookItem key={book.title} {...book} />
                     </div>
                   ))}
                 </div>
               </div>
-            </>
-          ) : (
-            <>
-              {searchResult ? (
+            ) : (
+              <div className={classes["search-content"]}>
+                <div className={classes["recent-search"]}>
+                  <p className={classes["recent-header"]}>Recent Search</p>
+                  <div className={classes["recents"]}>
+                    {recentSearch?.slice(0, 5).map((recent, iter) => (
+                      <p
+                        className={classes["recent-key"]}
+                        key={iter}
+                        onClick={() => handleRecent(recent)}
+                      >
+                        {recent}
+                      </p>
+                    ))}
+                  </div>
+                </div>
                 <div className={classes["content-books"]}>
                   <div className={classes["books-header"]}>
                     <p className={classes["books-header-title"]}>Books</p>
-                    <a onClick={() => handleEnter()}>See all</a>
+                    <Link href="/top-100" onClick={onClose}>
+                      See all
+                    </Link>
                   </div>
                   <div className={classes["books-init"]}>
-                    {searchResult.map((book) => (
+                    {books.slice(0, 7).map((book) => (
                       <div onClick={onClose} key={book.title}>
                         <BookItem key={book.title} {...book} />
                       </div>
                     ))}
                   </div>
                 </div>
-              ) : (
-                <>
-                  <div className={classes["recent-search"]}>
-                    <p className={classes["recent-header"]}>Recent Search</p>
-                    <div className={classes["recents"]}>
-                      {recentSearch?.slice(0, 5).map((recent, iter) => (
-                        <li key={iter} onClick={() => handleRecent(recent)}>
-                          {recent}
-                        </li>
-                      ))}
-                    </div>
-                  </div>
-                  <div className={classes["content-books"]}>
-                    <div className={classes["books-header"]}>
-                      <p className={classes["books-header-title"]}>Books</p>
-                      <Link href="/top-100" onClick={onClose}>
-                        See all
-                      </Link>
-                    </div>
-                    <div className={classes["books-init"]}>
-                      {books.slice(0, 7).map((book) => (
-                        <div onClick={onClose} key={book.title}>
-                          <BookItem key={book.title} {...book} />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </>
-              )}
-            </>
-          )}
-        </div>
+              </div>
+            )}
+          </>
+        )}
       </motion.section>
     </>
   );

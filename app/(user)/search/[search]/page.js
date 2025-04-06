@@ -39,7 +39,9 @@ export default async function SearchPage({ params }) {
           </div>
         </div>
         {!books.length && (
-          <div className={classes.fallback}>No matching results</div>
+          <div className={classes.results}>
+            <div className={classes.fallback}>No matching results</div>
+          </div>
         )}
         <div className={classes.results}>
           {books.map((book) => (
