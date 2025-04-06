@@ -4,10 +4,11 @@ import Image from "next/image";
 import classes from "./footer.module.css";
 
 import arrowIcon from "@/icons/right-arrow-white.svg";
+import loadingGif from "@/icons/loading.gif";
 import payment1 from "@/icons/payments/payment1.svg";
 import payment2 from "@/icons/payments/payment2.svg";
 import payment3 from "@/icons/payments/payment3.svg";
-import payment4 from "@/icons/payments/payment4.svg";
+
 import payment5 from "@/icons/payments/payment5.svg";
 import payment6 from "@/icons/payments/payment6.svg";
 import payment7 from "@/icons/payments/payment7.svg";
@@ -24,6 +25,7 @@ export default function Footer() {
   const [subscribed, setSubscription] = useState(false);
   const [email, setEmail] = useState({ email: "" });
   const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   function handleChange(e) {
     setError(false);
@@ -37,6 +39,8 @@ export default function Footer() {
       setError(true);
       return;
     }
+
+    setLoading(true);
 
     const res = await fetch("/api/newsletter", {
       method: "POST",
@@ -80,12 +84,21 @@ export default function Footer() {
                 type="email"
               />
               <button type="submit" className={classes["icon-arrow"]}>
-                <Image
-                  src={arrowIcon}
-                  height={20}
-                  width={20}
-                  alt="arrow icon"
-                />
+                {loading ? (
+                  <Image
+                    src={loadingGif}
+                    height={20}
+                    width={20}
+                    alt="arrow icon"
+                  />
+                ) : (
+                  <Image
+                    src={arrowIcon}
+                    height={20}
+                    width={20}
+                    alt="arrow icon"
+                  />
+                )}
               </button>
             </form>
           )}
