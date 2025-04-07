@@ -58,3 +58,9 @@
     width: 15px;
   }
 }
+
+@media (max-width: 710px) {
+  .navigation-wrapper {
+    padding: 0 2rem;
+  }
+}
