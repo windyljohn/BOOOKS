@@ -1,5 +1,4 @@
-import Footer from "@/components/footer/footer";
-// import "./globals.css";
+import "./globals.css";
 
 import Navigation from "./add-book/_component/navigation";
 
