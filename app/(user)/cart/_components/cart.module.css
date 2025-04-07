@@ -168,4 +168,8 @@
     width: 100%;
     border-top: solid 1px #000;
   }
+
+  .checkout-button {
+    font-size: 1.6rem;
+  }
 }
