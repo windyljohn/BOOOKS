@@ -326,13 +326,13 @@
   }
 
   .wrapper-left {
-    padding: 2rem;
+    padding: 3rem;
     max-width: none;
     width: 100%;
   }
 
   .wrapper-right {
-    padding: 2rem;
+    padding: 3rem;
     max-width: none;
     min-height: 0;
     margin-right: 0;
