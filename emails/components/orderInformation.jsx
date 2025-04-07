@@ -17,7 +17,14 @@ export default function OrderInformation({ item }) {
       <Section>
         <Row style={{ paddingBottom: "22px" }}>
           <Column width={100}>
-            <Img src={item.image} height={150} width={100} />
+            <Img
+              style={{
+                boxShadow: "0 3px 10px rgba(0, 0, 0, 0.25)",
+              }}
+              src={item.image}
+              height={150}
+              width={100}
+            />
           </Column>
           <Column
             align="left"
@@ -25,7 +32,6 @@ export default function OrderInformation({ item }) {
               paddingLeft: "20px",
               fontSize: "16px",
               maxWidth: "100px",
-              boxShadow: "0 3px 10px rgba(0, 0, 0, 0.25)",
             }}
           >
             <Row>
