@@ -3,6 +3,11 @@
   src: url("../../../../fonts/GTWalsheimPro-Medium.woff");
 }
 
+@font-face {
+  font-family: "GT Walsheim Pro Light";
+  src: url("../../../../fonts/GTWalsheimPro-Light.woff");
+}
+
 .header {
   font-family: "GT Walsheim Pro Medium";
   font-size: 2.1rem;

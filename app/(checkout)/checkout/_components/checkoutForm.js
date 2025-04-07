@@ -16,10 +16,17 @@ const stripePromise = loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
 );
 
+const appearance = {
+  variables: {
+    colorPrimary: "#000000",
+    fontSizeBase: "0.9rem",
+  },
+};
+
 export function CheckoutForm({ clientSecret }) {
   return (
     clientSecret && (
-      <Elements options={{ clientSecret }} stripe={stripePromise}>
+      <Elements options={{ clientSecret, appearance }} stripe={stripePromise}>
         <Form />
       </Elements>
     )

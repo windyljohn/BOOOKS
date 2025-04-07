@@ -16,26 +16,30 @@
 .section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 0 auto;
+  justify-content: center;
 }
 
 .wrapper-left {
   justify-self: flex-end;
   max-width: 65rem;
   width: 100%;
+  padding: 4rem;
 }
 
 .wrapper-right {
   background-color: #f5f5f5;
   border-left: solid 1px #dedede;
+  max-width: 65rem;
   min-height: calc(100vh - 8rem);
+  padding: 4rem;
+  margin-right: 4rem;
 }
 
 .form {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
-  padding: 4rem;
+
   justify-content: flex-end;
 }
 
@@ -256,7 +260,6 @@
 
 .items-wrapper {
   max-width: 65rem;
-  padding: 4rem;
 }
 
 .item {
@@ -264,6 +267,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 3rem;
+  gap: 2rem;
 }
 
 .item-details {
@@ -290,6 +294,7 @@
 .price {
   font-family: "GT Walsheim Pro Medium";
   font-size: 1.4rem;
+  white-space: nowrap;
 }
 
 .summary {
@@ -312,4 +317,23 @@
 .total span {
   font-family: "GT Walsheim Pro Medium";
   font-size: 2rem;
+}
+
+@media (max-width: 710px) {
+  .section {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .wrapper-left {
+    max-width: none;
+    width: 100%;
+  }
+
+  .wrapper-right {
+    max-width: none;
+    min-height: 0;
+    margin-right: 0;
+    grid-row: 1/2;
+  }
 }
