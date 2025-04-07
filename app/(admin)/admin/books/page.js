@@ -46,9 +46,7 @@ export default async function AdminBooks({ params, searchParams }) {
   return (
     <section className={classes.section}>
       <div className={classes.wrapper}>
-        <div className={classes["header-container"]}>
-          <p className={classes.header}>All Books</p>
-        </div>
+        <p className={classes.header}>All Books</p>
         <div className={classes["books-wrapper"]}>
           <div className={classes["book-items"]}>
             {entries.map((book) => {

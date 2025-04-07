@@ -10,14 +10,10 @@
   position: relative;
 }
 
-.header-container {
-  display: flex;
-  margin-bottom: 4rem;
-}
-
 .header {
   font-family: "GT Walsheim Pro Bold";
   font-size: 4.8rem;
+  margin-bottom: 4rem;
 }
 
 .books-wrapper {
@@ -27,12 +23,10 @@
 
 .book-items {
   display: grid;
-  /* max-width: 124rem; */
-  /* min-width: 134rem; */
+
   grid-template-columns: repeat(5, auto);
   justify-content: center;
-  column-gap: 10rem;
-  row-gap: 7.5rem;
+  gap: 8rem;
   margin-bottom: 6rem;
 }
 
@@ -40,4 +34,28 @@
   position: absolute;
   top: 50vh;
   left: 50vh;
+}
+
+@media (max-width: 850px) {
+  .book-items {
+    grid-template-columns: repeat(4, auto);
+    gap: 6rem;
+  }
+}
+
+@media (max-width: 610px) {
+  .book-items {
+    grid-template-columns: repeat(3, auto);
+    gap: 6rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .book-items {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .header {
+    text-align: center;
+  }
 }

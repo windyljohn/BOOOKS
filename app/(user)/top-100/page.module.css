@@ -31,9 +31,8 @@
 .book-items {
   display: grid;
   grid-template-columns: repeat(6, auto);
-  justify-content: space-between;
-  column-gap: 10rem;
-  row-gap: 7.5rem;
+  justify-content: center;
+  gap: 8rem;
   margin-bottom: 6rem;
 }
 
@@ -58,4 +57,30 @@
   display: flex;
   border-radius: 100%;
   border: solid 1px #000;
+}
+
+@media (max-width: 1340px) {
+  .book-items {
+    grid-template-columns: repeat(5, auto);
+  }
+}
+
+@media (max-width: 850px) {
+  .book-items {
+    grid-template-columns: repeat(4, auto);
+    gap: 6rem;
+  }
+}
+
+@media (max-width: 610px) {
+  .book-items {
+    grid-template-columns: repeat(3, auto);
+    gap: 6rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .book-items {
+    grid-template-columns: repeat(2, auto);
+  }
 }

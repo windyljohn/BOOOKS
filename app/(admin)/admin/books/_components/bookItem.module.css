@@ -37,3 +37,10 @@
 .price {
   font-size: 1.4rem;
 }
+
+@media (max-width: 1024px) {
+  .book img {
+    width: 100px;
+    height: 150px;
+  }
+}
