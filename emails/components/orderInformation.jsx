@@ -21,7 +21,12 @@ export default function OrderInformation({ item }) {
           </Column>
           <Column
             align="left"
-            style={{ paddingLeft: "20px", fontSize: "16px", maxWidth: "100px" }}
+            style={{
+              paddingLeft: "20px",
+              fontSize: "16px",
+              maxWidth: "100px",
+              boxShadow: "0 3px 10px rgba(0, 0, 0, 0.25)",
+            }}
           >
             <Row>
               <Text style={global.title}>{item.title}</Text>
