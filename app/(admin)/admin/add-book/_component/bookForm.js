@@ -24,7 +24,7 @@ export default function BookForm() {
   const [bookData, setBookData] = useState(startingBookData);
   const [isLoading, setIsLoading] = useState(false);
   const [complete, setComplete] = useState(false);
-  const [success, setSuccess] = useState(false);
+  const [success, setSuccess] = useState(true);
   const form = useRef(null);
 
   function handleClose() {
@@ -96,15 +96,21 @@ export default function BookForm() {
         {success && (
           <motion.div
             initial={{
-              opacity: 0,
               y: -30,
+              x: "-50%",
+              opacity: 0,
             }}
             animate={{
               y: 0,
               opacity: 1,
               transition: { duration: 0.3 },
             }}
-            exit={{ y: -30, opacity: 0, transition: { duration: 0.3 } }}
+            exit={{
+              y: -30,
+              x: "-50%",
+              opacity: 0,
+              transition: { duration: 0.3 },
+            }}
             className={classes.success}
           >
             <div className={classes["success-container"]}>

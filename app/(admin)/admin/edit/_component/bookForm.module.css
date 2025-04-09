@@ -33,11 +33,9 @@
   padding: 2rem 6rem;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
   background-color: #fff;
-  width: 55rem;
-  right: 0;
-  top: 10rem;
-  right: 22rem;
-  transform: translateY(50%);
+  width: 50rem;
+  left: 50%;
+  top: 2rem;
 }
 
 .success::after {
@@ -243,6 +241,13 @@
   box-shadow: none;
 }
 
+@media (max-width: 1024px) {
+  .success-container img {
+    width: 25px;
+    height: 100%;
+  }
+}
+
 @media (max-width: 565px) {
   .container {
     grid-template-rows: repeat(8, 1fr);
@@ -254,6 +259,18 @@
 
   .form {
     padding: 2rem;
+  }
+
+  .success-header {
+    font-size: 2.1rem;
+  }
+
+  .success-text {
+    font-size: 1.6rem;
+  }
+
+  .close {
+    font-size: 1.2rem;
   }
 }
 

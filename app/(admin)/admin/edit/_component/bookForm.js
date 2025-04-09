@@ -46,7 +46,7 @@ export default function BookForm({
   const [bookData, setBookData] = useState(startingBookData);
   const [isLoading, setIsLoading] = useState(false);
   const [complete, setComplete] = useState(false);
-  const [confirmDelete, setDelete] = useState(false);
+  const [confirmDelete, setDelete] = useState(true);
   const [deleting, setDeleting] = useState(false);
   const form = useRef(null);
   const router = useRouter();
@@ -129,6 +129,7 @@ export default function BookForm({
           <motion.div
             initial={{
               opacity: 0,
+              x: "-50%",
               y: -50,
             }}
             animate={{
@@ -136,7 +137,12 @@ export default function BookForm({
               opacity: 1,
               transition: { duration: 0.3 },
             }}
-            exit={{ y: -50, opacity: 0, transition: { duration: 0.3 } }}
+            exit={{
+              y: -50,
+              x: "-50%",
+              opacity: 0,
+              transition: { duration: 0.3 },
+            }}
             className={classes.success}
           >
             <div className={classes["success-container"]}>
