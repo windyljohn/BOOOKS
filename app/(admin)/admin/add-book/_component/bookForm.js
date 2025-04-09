@@ -24,7 +24,7 @@ export default function BookForm() {
   const [bookData, setBookData] = useState(startingBookData);
   const [isLoading, setIsLoading] = useState(false);
   const [complete, setComplete] = useState(false);
-  const [success, setSuccess] = useState(true);
+  const [success, setSuccess] = useState(false);
   const form = useRef(null);
 
   function handleClose() {

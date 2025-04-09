@@ -46,7 +46,7 @@ export default function BookForm({
   const [bookData, setBookData] = useState(startingBookData);
   const [isLoading, setIsLoading] = useState(false);
   const [complete, setComplete] = useState(false);
-  const [confirmDelete, setDelete] = useState(true);
+  const [confirmDelete, setDelete] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const form = useRef(null);
   const router = useRouter();
