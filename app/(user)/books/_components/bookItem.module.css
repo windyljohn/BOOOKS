@@ -29,8 +29,8 @@
   -webkit-user-drag: none;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
   transition: all 0.25s;
-  height: 70%;
-  width: auto;
+  width: 20vw;
+  height: auto;
   justify-self: right;
   align-self: center;
 }
@@ -119,6 +119,9 @@
 @media (max-width: 1180px) {
   .wrapper {
     gap: 8rem;
+  }
+  .image {
+    width: 25vw;
   }
 }
 
