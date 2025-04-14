@@ -24,12 +24,18 @@ export default async function Top100Page({ params, searchParams }) {
 
   const { top100 } = await getBooks();
 
-  // pagination;
-  // const page = searchParameter["page"] ?? "1";
-  // const perPage = 100;
-  // const start = (page - 1) * perPage;
-  // const end = start + perPage;
-  // const entries = top100.slice(start, end);
+  top100.sort((a, b) => {
+    const idA = a.title;
+    const idB = b.title;
+
+    if (idA > idB) {
+      return 1;
+    }
+
+    if (idA < idB) {
+      return -1;
+    }
+  });
 
   return (
     <section className={classes.section}>
