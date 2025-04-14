@@ -25,11 +25,11 @@ export default async function Top100Page({ params, searchParams }) {
   const { top100 } = await getBooks();
 
   // pagination;
-  const page = searchParameter["page"] ?? "1";
-  const perPage = 100;
-  const start = (page - 1) * perPage;
-  const end = start + perPage;
-  const entries = top100.slice(start, end);
+  // const page = searchParameter["page"] ?? "1";
+  // const perPage = 100;
+  // const start = (page - 1) * perPage;
+  // const end = start + perPage;
+  // const entries = top100.slice(start, end);
 
   return (
     <section className={classes.section}>
@@ -37,7 +37,7 @@ export default async function Top100Page({ params, searchParams }) {
         <h2 className={classes.header}>Top 100 Books</h2>
         <div className={classes["books-wrapper"]}>
           <div className={classes["book-items"]}>
-            {entries.map((book) => (
+            {top100.map((book) => (
               <BookItem key={book._id} {...book} />
             ))}
           </div>
