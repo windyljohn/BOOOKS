@@ -69,14 +69,18 @@ export default function BookForm() {
     e.preventDefault();
     setIsLoading(true);
 
+    const category = document.getElementsByName("category");
+    const tags = document.getElementsByName("tags");
+
     if (complete) {
       const res = await fetch("/api/books", {
         method: "POST",
         body: JSON.stringify({ bookData }),
         "content-type": "application/json",
       });
-
       if (res.ok) {
+        category.forEach((x) => (x.checked = false));
+        tags.forEach((x) => (x.checked = false));
         form.current.reset();
         setBookData(startingBookData);
         handleOpen();
