@@ -24,8 +24,8 @@ export default async function AdminBooks({ params, searchParams }) {
   const { books } = await getBooks();
 
   books.sort((a, b) => {
-    const idA = a._id;
-    const idB = b._id;
+    const idA = a.title;
+    const idB = b.title;
 
     if (idA < idB) {
       return 1;

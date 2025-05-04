@@ -24,6 +24,7 @@
 
 .item-details {
   width: 100%;
+  display: grid;
 }
 
 .item-count {

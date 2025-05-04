@@ -15,6 +15,7 @@
 
 .section {
   padding: 12rem;
+  display: grid;
 }
 
 .wrapper {
